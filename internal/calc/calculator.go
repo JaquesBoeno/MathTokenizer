@@ -18,7 +18,7 @@ func Calculate(arr []token.Token) (float64, []token.Token, error) {
 				val, err := Sum(tokens[i-1], tokens[i+1])
 				if err == nil {
 					result = val
-					tokens = append(append(tokens[0:i-1], token.Token{"Number", fmt.Sprintf("%f", result)}), tokens[i+2:]...)
+					tokens = append(append(tokens[0:i-1], token.Token{Type: "Number", Value: fmt.Sprintf("%f", result)}), tokens[i+2:]...)
 					i = 0
 				} else {
 					return 0, tokens, err
