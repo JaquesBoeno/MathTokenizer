@@ -8,5 +8,5 @@ import (
 )
 
 func main() {
-	fmt.Println(calc.Calculate(token.Tokenizer("2+4*6+5/-5")))
+	fmt.Println(calc.Calculate(token.Tokenizer("2+9*2^3/2-1")))
 }
